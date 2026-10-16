@@ -26,7 +26,7 @@ h3 { font-size:17px; }
 .accent { color:var(--blue); }
 .eyebrow { color:var(--blue); font-size:10px; font-weight:700; letter-spacing:2px; margin-bottom:25px; }
 .dot { display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--amber); margin-right:8px; }
-.about-grid { display:grid; grid-template-columns:1.25fr 1fr; align-items:center; gap:70px; padding:72px 0 65px; }
+.about-grid { display:grid; grid-template-columns:1.25fr 1fr; align-items:start; gap:70px; padding:72px 0 65px; }
 .major { color:var(--muted); font-size:17px; }
 .essay { max-width:550px; margin:28px 0; }
 .placeholder { color:var(--muted); padding-left:16px; border-left:2px solid var(--amber); }
@@ -75,3 +75,10 @@ dd { margin:6px 0 0; overflow-wrap:anywhere; }
 @media(max-width:800px) { .about-grid { gap:30px; } .outcome-grid { grid-template-columns:repeat(3,1fr); } footer { margin:0 32px; } }
 @media(max-width:580px) { .header-inner { padding:20px; } main { padding:0 20px; } nav { gap:3px; } nav a { font-size:12px; padding:7px 9px; } .about-grid { grid-template-columns:1fr; padding:40px 0; gap:35px; } h1 { letter-spacing:-1.5px; } .portrait-card { max-width:360px; width:100%; justify-self:center; } .section-title { display:block; } .section-title>p { margin-top:15px; } .outcome-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .outcome-card { padding:17px 13px; } .outcome-card h3 { font-size:15px; } .learning { padding-bottom:40px; } footer { margin:0 20px; flex-direction:column; gap:8px; } .log-entry,.evidence-panel { padding:23px; } .back-link { margin-bottom:30px; } }
 @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { transition:none !important; } }
+
+/* Portrait refresh: align beside the introduction and preserve the complete headshot. */
+.about-copy h1 { font-size:clamp(44px,5.5vw,68px); }
+.portrait-card { align-self:start; margin-top:44px; padding:12px; border-radius:90px 90px 20px 20px; background:#e4ebef; border:1px solid #d4dfe5; box-shadow:0 18px 45px -24px rgba(40,59,75,.35); }
+.portrait { width:100%; height:auto; aspect-ratio:4/5; object-fit:cover; object-position:center top; border-radius:78px 78px 12px 12px; background:#eef3f5; }
+.portrait-card figcaption { padding:18px 5px 6px; }
+@media(max-width:580px) { .portrait-card { margin-top:0; } }
